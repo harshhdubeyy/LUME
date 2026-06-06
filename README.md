@@ -1,49 +1,71 @@
 # LUME
 
-### AI-Powered WhatsApp Business Automation Platform
+## AI-Powered WhatsApp Business Automation Platform
 
-LUME helps businesses automate customer conversations, order management, bookings, support, and lead generation directly on WhatsApp using intelligent workflows and AI-driven automation.
+LUME is a modern SaaS platform that helps businesses automate customer communication, lead management, bookings, and support workflows through intelligent WhatsApp automation.
 
-Built for restaurants, cafes, local businesses, and service providers looking to scale customer interactions without increasing operational overhead.
+The platform is designed for businesses looking to improve customer engagement, reduce manual effort, and streamline communication using automated workflows and AI-powered interactions.
 
 ---
 
-## Features
+## Overview
 
-### Authentication
+Businesses often struggle with managing customer inquiries, responding quickly, capturing leads, and maintaining consistent communication across channels.
 
-* Secure Google OAuth Login
-* User Management with Supabase Auth
-* Session Persistence
+LUME addresses these challenges by providing a centralized automation platform that enables businesses to:
 
-### WhatsApp Automation
+* Automate customer conversations
+* Capture and qualify leads
+* Manage inquiries efficiently
+* Improve customer response times
+* Simplify workflow management
+* Scale customer engagement operations
 
-* Automated Customer Conversations
-* Order & Booking Workflows
-* Smart Support Flows
-* Lead Capture Automation
+---
 
-### Subscription Billing
+## Key Features
 
-* Razorpay Payment Gateway Integration
-* Subscription Management
-* Plan Upgrades
-* Payment Tracking
+### Customer Communication
 
-### Business Growth Tools
+* Automated customer interactions
+* Real-time inquiry handling
+* Smart response workflows
+* Customer engagement management
 
-* Lead Collection Forms
-* Customer Inquiry Management
-* Conversion-Focused Landing Pages
-* Analytics-Ready Architecture
+### Lead Management
 
-### Modern SaaS Experience
+* Lead capture automation
+* Lead qualification workflows
+* Customer onboarding processes
+* Inquiry tracking
 
-* Responsive Design
-* Premium UI/UX
-* Smooth Scrolling Navigation
-* Interactive Pricing Section
-* Mobile-First Experience
+### Business Automation
+
+* Workflow automation
+* Customer follow-up systems
+* Booking management support
+* Process optimization tools
+
+### Authentication & Security
+
+* Google Authentication
+* Secure user sessions
+* Protected routes
+* User management system
+
+### Payment & Subscription Management
+
+* Razorpay integration
+* Subscription plans
+* Secure payment processing
+* Billing management
+
+### User Experience
+
+* Responsive design
+* Modern SaaS interface
+* Mobile-friendly layout
+* Fast and optimized performance
 
 ---
 
@@ -51,20 +73,17 @@ Built for restaurants, cafes, local businesses, and service providers looking to
 
 ### Frontend
 
-* Next.js 15
+* Next.js
+* React
 * TypeScript
 * Tailwind CSS
 * Framer Motion
 
-### Backend
+### Backend Services
 
 * Supabase
 * PostgreSQL
-
-### Authentication
-
-* Google OAuth
-* Supabase Auth
+* Supabase Authentication
 
 ### Payments
 
@@ -76,123 +95,203 @@ Built for restaurants, cafes, local businesses, and service providers looking to
 
 ---
 
-##  Project Structure
+## Architecture
 
-```bash
-app/
-├── api/
-├── dashboard/
-├── page.tsx
-
-components/
-├── Navbar
-├── HeroSection
-├── PricingSection
-├── ContactSection
-├── Footer
-
-lib/
-├── auth.ts
-├── supabase.ts
-├── user.ts
+```text
+User
+ │
+ ▼
+Next.js Frontend
+ │
+ ├── Authentication
+ │      │
+ │      ▼
+ │   Supabase Auth
+ │
+ ├── Database Operations
+ │      │
+ │      ▼
+ │   PostgreSQL (Supabase)
+ │
+ ├── Payment Management
+ │      │
+ │      ▼
+ │   Razorpay
+ │
+ ▼
+Business Automation Layer
 ```
 
 ---
 
-## Getting Started
+## Project Structure
 
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/lume.git
+```text
+LUME/
+│
+├── app/
+├── components/
+├── sections/
+├── lib/
+├── public/
+├── styles/
+├── hooks/
+├── utils/
+├── middleware/
+├── models/
+├── types/
+│
+├── package.json
+├── next.config.js
+└── README.md
 ```
 
-Install dependencies:
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/harshhdubeyy/LUME.git
+cd LUME
+```
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-Run the development server:
+### Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+NEXT_PUBLIC_RAZORPAY_KEY_ID=your_key_id
+RAZORPAY_KEY_SECRET=your_secret
+```
+
+### Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Open:
+Application runs on:
 
-```bash
+```text
 http://localhost:3000
 ```
 
 ---
 
-## Environment Variables
+## Screenshots
 
-Create a `.env.local` file:
+Add screenshots of:
 
-```env
-NEXT_PUBLIC_SUPABASE_URL=
+* Landing Page
+* Dashboard
+* Authentication
+* Subscription Plans
+* Automation Workflow
+* Business Management Interface
 
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
+Example:
 
-NEXT_PUBLIC_RAZORPAY_KEY_ID=
-
-RAZORPAY_KEY_SECRET=
+```text
+/screenshots
+    landing-page.png
+    dashboard.png
+    plans.png
+    automation.png
 ```
+
+---
+
+## Business Use Cases
+
+### Small Businesses
+
+Automate customer interactions and reduce manual communication.
+
+### Restaurants & Cafes
+
+Manage inquiries, reservations, and customer engagement.
+
+### Agencies
+
+Handle client communication workflows efficiently.
+
+### Service Providers
+
+Automate lead generation and booking processes.
+
+### Customer Support Teams
+
+Improve response times through automated workflows.
+
+---
+
+## Performance Goals
+
+* Fast page loading
+* Responsive UI
+* Secure authentication
+* Scalable architecture
+* Reliable payment processing
+
+---
+
+## Future Roadmap
+
+### Phase 1
+
+* WhatsApp Cloud API Integration
+* Advanced Workflow Builder
+* Customer Analytics
+
+### Phase 2
+
+* AI Chat Assistant
+* CRM Integrations
+* Team Management
+
+### Phase 3
+
+* Multi-Channel Communication
+* Advanced Automation Engine
+* Enterprise Dashboard
 
 ---
 
 ## Deployment
 
-LUME is designed for deployment on Vercel.
+Build the application:
 
 ```bash
 npm run build
 ```
 
-```bash
-vercel --prod
-```
+Deploy using:
+
+* Vercel
+* Docker
+* Cloud Hosting Providers
 
 ---
 
-## Current Status
+## Contributing
 
-### MVP Completed
+Contributions, suggestions, and improvements are welcome.
 
-* [x] Landing Page
-* [x] Google Authentication
-* [x] Supabase Integration
-* [x] Lead Capture System
-* [x] Razorpay Payments
-* [x] Pricing Plans
-* [x] Contact Management
-* [x] Responsive UI
-
-### Upcoming Features
-
-* [ ] WhatsApp Cloud API Integration
-* [ ] AI Agent Builder
-* [ ] Analytics Dashboard
-* [ ] Broadcast Messaging
-* [ ] Customer CRM
-* [ ] Team Management
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
 
 ---
 
-## Vision
-
-LUME aims to become the operating system for WhatsApp-first businesses by enabling intelligent customer interactions, automated workflows, and scalable business growth through conversational AI.
-
----
-
-## Author
-
-**Hitakshi**
-
-Building AI-powered products, automation systems, and scalable SaaS applications.
-
----
-
-### Built using Next.js, Supabase, and Razorpay.
